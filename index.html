@@ -1,0 +1,137 @@
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    .wrap{
+        position:-ms-page;
+        margin:5%;
+        width:600px;
+        min-width:300px;
+    }
+    .box{
+      position:fixed;
+      margin:5%;
+      width:600%;
+      min-width:300px;
+      visibility: hidden;
+
+    }
+    .box .show{
+      visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 0.1s;}
+
+    .modal {
+    display: none; 
+    position:fixed;
+    z-index:1;
+    padding-top: 100px;
+    left: 0;
+    top:0;
+    width:100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+
+    
+</style>
+
+ <script> 
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</head>
+<body>
+    <center>
+<div class="wrap">
+<table class="table table-striped" border="3px">
+  <thead>
+<!--
+      <tr>
+            <th colspan="4"><div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" style="width:100%;"placeholder="Search.." name="search">
+                    </form>
+                  </div>
+                </th>
+      </tr> 
+-->
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Prescription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>lorem ipsum</td>
+      <td>000-000-0000</td>
+      <td><button type="button" id="myBtn"class="btn btn-success">View</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>lorem ipsum</td>
+      <td>000-000-0000</td>
+      <td><button type="button" class="btn btn-success">View</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>lorem ipsum</td>
+      <td>000-000-0000</td>
+      <td><button type="button" class="btn btn-success">View</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="modal" id="myModal" >
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>DWLSPFAINAEFIJ</p>
+  </div>
+</div>
+</center>
+</body>
+<html>
